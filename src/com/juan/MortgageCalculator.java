@@ -21,6 +21,7 @@ public class MortgageCalculator {
 
         String mortgageFormat = NumberFormat.getCurrencyInstance().format(mortgage);
         System.out.println("\nMortgage: " + mortgageFormat);
+        scanner.close();
 
     }
 
