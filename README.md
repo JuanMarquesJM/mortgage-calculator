@@ -1,43 +1,44 @@
 # Java Mortgage Calculator
+
 ![Linguagem Principal: Java](https://img.shields.io/badge/Linguagem-Java%20Core-orange)
 ![Licença: MIT](https://img.shields.io/badge/License-MIT-blue)
+![Paradigma: POO](https://img.shields.io/badge/Paradigma-Orientação%20a%20Objetos-green)
+
 ---
 
 ## Sobre o projeto
 
-Este projeto é uma calculadora de hipoteca desenvolvida em Java para console.
+Este projeto é uma evolução de uma calculadora de hipoteca para console, agora estruturada sob os princípios da **Programação Orientada a Objetos (POO)**.
 
-O principal objetivo foi solidificar os fundamentos do Java Core, focando em controle de fluxo, validação de dados e arquitetura limpa.
+O objetivo desta etapa foi ir além da lógica procedural, aplicando o encapsulamento e a separação de responsabilidades para criar um código mais modular, reutilizável e fácil de manter.
 
 ---
 
-## Estrutura
+## Estrutura e Evolução
 
-* Validação Robusta: Implementação de loops `do-while` dedicados para cada entrada de dados. O sistema rejeita valores inválidos, por exemplo, juros negativos ou zero, e solicita novamente apenas o campo incorreto.
-* Separação de Responsabilidades:
-    * `main`: Atua apenas como orquestrador.
-    * Métodos Privados (`getValid...`): Isolam a lógica de interação e validação com o usuário.
-    * `calculateMortgage`: Método puro focado exclusivamente na regra de negócio matemática.
-* Segurança de Input: Uso de `Scanner` com `Locale.US` para garantir compatibilidade global com formatos decimais.
+* **Arquitetura baseada em objetos:** A lógica de cálculo foi isolada na classe `Mortgage`, que encapsula os dados do empréstimo e protege a regra de negócio.
+* **DRY (Don't Repeat Yourself):** A validação de dados, que antes era repetida em vários métodos, foi abstraída no método utilitário `readNumber`, permitindo validar qualquer entrada com uma única lógica genérica.
+* **Separação de preocupações:**
+    * `Main`: Atua como a interface de usuário (UI), gerenciando a entrada e saída.
+    * `Mortgage`: Atua como o motor de cálculo, independente de como os dados são lidos.
+* **Segurança de input:** Uso de `Scanner` com `Locale.US` para garantir precisão decimal e compatibilidade com o formato de ponto.
 
 ---
 
 ## Funcionalidades
 
-O programa solicita três variáveis, garantindo que estejam dentro de limites realistas:
+O programa solicita três variáveis fundamentais, garantindo integridade através de limites realistas:
 
-1.  **Principal ($):** Valor do empréstimo (Aceita entre 1k e 1M).
-2.  **Annual Interest Rate (%):** Taxa de juros anual (Aceita entre 1% e 30%).
-3.  **Period (Years):** Duração do empréstimo (Aceita entre 1 e 30 anos).
+1.  **Principal ($):** Valor do empréstimo (Range: 1,000 - 1,000,000).
+2.  **Annual interest rate (%):** Taxa de juros anual (Range: 1 - 30).
+3.  **Period (Years):** Duração do empréstimo (Range: 1 - 30 anos).
 
-Fórmula de Amortização:
+Fórmula de Amortização utilizada:
 $$M = P \cdot \frac{i(1+i)^n}{(1+i)^n-1}$$
 
 ---
 
 ## Como executar o projeto
-
-Para rodar este projeto localmente, você precisa ter o JDK instalado.
 
 ### Pré-requisitos
 * JDK 17 ou superior
@@ -46,30 +47,30 @@ Para rodar este projeto localmente, você precisa ter o JDK instalado.
 
 1.  Clone o repositório:
     ```bash
-    git clone https://github.com/JuanMarquesJM/mortgage-calculator.git
+    git clone [https://github.com/JuanMarquesJM/mortgage-calculator.git](https://github.com/JuanMarquesJM/mortgage-calculator.git)
     ```
-2.  Entre na pasta do código fonte:
+2.  Navegue até o diretório:
     ```bash
     cd mortgage-calculator/src
     ```
-3.  Compile o código:
+3.  Compile todos os arquivos do pacote:
     ```bash
-    javac com/juan/MortgageCalculator.java
+    javac com/juan/*.java
     ```
 4.  Execute a classe principal:
     ```bash
-    java com.juan.MortgageCalculator
+    java com.juan.Main
     ```
 
 ---
 
 ## Tecnologias utilizadas
 
-| Tecnologia | Descrição |
-| :--- | :--- |
-| **Java** | Linguagem principal, Java SE. |
-| **Terminal** | Interface de I/O para o usuário. |
-| **Git & GitHub** | Controle de versão. |
+| Tecnologia | Descrição                                                   |
+| :--- |:------------------------------------------------------------|
+| **Java SE** | Linguagem principal com foco em POO.                        |
+| **POO** | Encapsulamento, abstração e separação de responsabilidades. |
+| **Git & GitHub** | Controle de versão.                                         |
 
 ---
 
@@ -78,3 +79,4 @@ Para rodar este projeto localmente, você precisa ter o JDK instalado.
 **Juan Carlos**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juanmarques-jm/)
+
