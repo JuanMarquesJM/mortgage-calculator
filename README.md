@@ -1,4 +1,4 @@
-# Java Mortgage Calculator (OOP Edition)
+# Java Mortgage Calculator
 
 ![Linguagem Principal: Java](https://img.shields.io/badge/Linguagem-Java%20Core-orange)
 ![Licença: MIT](https://img.shields.io/badge/License-MIT-blue)
@@ -79,3 +79,4 @@ $$M = P \cdot \frac{i(1+i)^n}{(1+i)^n-1}$$
 **Juan Carlos**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juanmarques-jm/)
+
